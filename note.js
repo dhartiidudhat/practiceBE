@@ -104,7 +104,42 @@ thi restart karvu pade
 */
 
 
+// -------------------> 03 create FE and BE
+/*
+// create  BE & FE folder
+// there are two type of js
+// common js that is we used require 
+// module js is import 
 
+// 1) to use module we go to package.json -> "type":"module"
+// 2) create server
+// 3) create get Jokes
+// make joke list and check in JsonFormater
+
+// Create FE using npm create vite@latest . [. ae folder name nai puche FE ma banvi dese]
+
+// it give cors error
+// ex:- it provide safety  (Apdu home hoy  parents ne home aav daiye(Allow kariye gher ma aava),
+ cousines ne aav diye, guest ne aava daiye door to door seller ne na aava deye sidhu gher ma )
+// server koi aur port pe chal raha hai 
+// app koi aur port par hai to ketli req aavi sake che 
+// crossOrigin:- url is diff, port is diff,  FE:3000 BE:4000 origin same hovu joye
+
+// install cors in BE to handle this error
+
+// bav moti api na lakhvi aetle
+
+// Proxy --> proxy add kri deye to aapdu server gme te port par kam karthu
+ hoy but ae proxy add karvathi samje same origin mathi aavi che 
+// to add Proxy -> viteconfig.js -> server -> proxy  
+vite [koi bhi req kre to hve api vadu aeni jode append thi jashe 
+proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allow kre ]
+// proxy oj je api thi set jeni aagal api aavthu hse thya aa jati rese
+
+
+// ----> for build npm run bulid it create dist folder 
+
+*/
 
 
 // github copiloat --> for suggestion
