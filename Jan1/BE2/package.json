@@ -1,0 +1,16 @@
+{
+  "name": "be2",
+  "version": "1.0.0",
+  "description": "create a server and make joke api ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
