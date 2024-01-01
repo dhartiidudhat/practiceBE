@@ -3,13 +3,14 @@
 
 // -------------------> 01 roadmap
 /*
-// check ss
+// check pdf
 
 // ORM (Object-Relational Mapping):
 // ODM (Object-Document Mapping):
 */
-
+// Check hitesh APi video in english chnael
 // -------------------> 02 make single app and deploy
+// Express site api refrense 
 /*
 understand first from the notebook
 to create app  -> npm init
@@ -103,6 +104,12 @@ thi restart karvu pade
 // we can not add .env in git for understanding env i added
 */
 
+/* short 
+// 1)create a server using common js
+   2)Deployed
+*/
+
+
 
 // -------------------> 03 create FE and BE
 /*
@@ -141,5 +148,25 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 
 */
 
+/* short 
+    1)BE 
+        1) create server 
+        2)create jokes api
+        3) listen on port
+
+    2)FE
+        1) Create app
+        2) integrate api
+        3) map data to show on screen
+        4) u can solve cors origin err using 
+            1) cors in Be
+            2) using proxy in EF
+        5) to build react app -> npm run build
+            -it make 1 dist folder
+            take that dist folder and move to BE
+            // now use middleware to server static asset
+
+            // BE ma changes kriye to prpoget[show] krshe but React na changes nai kre 
+            // soo aapde fri thi build banavu pade ane fri thi dist move karvu pade BE ma tayre[it is bad practice]
 
 // github copiloat --> for suggestion
