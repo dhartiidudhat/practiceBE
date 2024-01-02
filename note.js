@@ -235,6 +235,51 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 // model ma je name hoy ae ref ma daiye che
 */
 
+/* short 
+// underatand how to start project
+// create a model of todo
+*/
+
+// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used 
+/*
+// Create Ecom Models
+// In mongoDb it genrate id it self we dont need to declare 
+// --->user, category [8gb-16gb laptop, summer,winter ]
+// --->Product
+    // - pimg hume db store nahi karni chaiye karvi hoy to buffer type ma kri sakya but ae db
+    //  ma load le pachi
+    // // - server par 1 folder me rakhna chiye us folder ka public url liya jata hai ya to 
+    // thrid party services ma store karva ma aave che je ek url aape che ne aene db ma 
+    // store kari devani
+    // cloundary pn same che 
+
+    // --->Order 
+    // here we take in array it just like todo one check todo ma subtodo jema define karyu che 
+    // aem j bus aane sidhu array ma lidhu
+    // for[quantity and which product we order]
+      // --> kisne konsa product order kiya aure kitna order kiya
+    // for example:- dharti order 5 product [boat, books, headphone, nailpaint] now dharti 
+    // order all product but also we need to check product quantity
+    //  nailpaint ketli order kri[nailpaint -4, books-12, buds-1, ] aa rite
+
+    // --->OrderItem  --> mongodb badha table mate ek unique id genreate kre che 
+
+    // Id na base par aakha product ne access kri leshu ane quntity define kri dithi 
+    // che so aa kha schema ne aarya ma lai lidh0
+// enum means choices
+    // ---->satus order status[pending, deliverd, cancelled ma j choice kri sko cho] aa 
+    // 3 mthi j choose kri saksho spelling mistake hse to bhi enter nai karva de
+
+// --------------------------------> Hospital Managment 
+  // patient
+  // doctor
+  // Hospital
+
+  // like ka array rakhna ho to user aake ek btn hi to bdabata hai to apna objectid[uniqueid ] hai 
+  // like dislike ma  [user na id store kravna ]
+
+  // aane kehvuya data structue karva 
+*/
 
 
 // github copiloat --> for suggestion
