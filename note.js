@@ -1,16 +1,20 @@
 // deploye node using pm2
 // deploye react using nginx
 
-// -------------------> 01 roadmap
+// -------------------------------------------> 01 roadmap
 /*
-// check ss
+// check pdf
 
 // ORM (Object-Relational Mapping):
 // ODM (Object-Document Mapping):
+
 */
 
-// -------------------> 02 make single app and deploy
+
+// -----------------------------------------------> 02 make single app and deploy
+// Express site api refrense 
 /*
+// Check hitesh APi video in english chnael
 understand first from the notebook
 to create app  -> npm init
 // Explorer also express site
@@ -103,8 +107,179 @@ thi restart karvu pade
 // we can not add .env in git for understanding env i added
 */
 
+/* short 
+// 1)create a server using common js
+   2)Deployed
+*/
+
+// -----------------------------------------------> 03 create FE and BE
+/*
+// create  BE & FE folder
+// there are two type of js
+// common js that is we used require 
+// module js is import 
+
+// 1) to use module we go to package.json -> "type":"module"
+// 2) create server
+// 3) create get Jokes
+// make joke list and check in JsonFormater
+
+// Create FE using npm create vite@latest . [. ae folder name nai puche FE ma banvi dese]
+
+// it give cors error
+// ex:- it provide safety  (Apdu home hoy  parents ne home aav daiye(Allow kariye gher ma aava),
+ cousines ne aav diye, guest ne aava daiye door to door seller ne na aava deye sidhu gher ma )
+// server koi aur port pe chal raha hai 
+// app koi aur port par hai to ketli req aavi sake che 
+// crossOrigin:- url is diff, port is diff,  FE:3000 BE:4000 origin same hovu joye
+
+// install cors in BE to handle this error
+
+// bav moti api na lakhvi aetle
+
+// Proxy --> proxy add kri deye to aapdu server gme te port par kam karthu
+ hoy but ae proxy add karvathi samje same origin mathi aavi che 
+// to add Proxy -> viteconfig.js -> server -> proxy  
+vite [koi bhi req kre to hve api vadu aeni jode append thi jashe 
+proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allow kre ]
+// proxy oj je api thi set jeni aagal api aavthu hse thya aa jati rese
 
 
+// ----> for build npm run bulid it create dist folder 
+
+*/
+
+/* short 
+    1)BE 
+        1) create server 
+        2)create jokes api
+        3) listen on port
+
+    2)FE
+        1) Create app
+        2) integrate api
+        3) map data to show on screen
+        4) u can solve cors origin err using 
+            1) cors in Be
+            2) using proxy in EF
+        5) to build react app -> npm run build
+            -it make 1 dist folder
+            take that dist folder and move to BE
+            // now use middleware to server static asset
+
+            // BE ma changes kriye to prpoget[show] krshe but React na changes nai kre 
+            // soo aapde fri thi build banavu pade ane fri thi dist move karvu pade BE ma tayre[it is bad practice]
+*/
+
+// -----------------------------------------------> 04 MODLES
+/*
+// diff b/w exp &  fresher
+
+// read first from the book
+// site is :- moon model, datensen -> for data Modeling
+
+
+// eraser to create a structure
+
+// 1) create Register from
+// 2) create todo 
+// go to mongoose site , prisma is one helper 
+
+// -----------------------------------Phase :- 2 2:30:12 [Code write]
+
+// codeSandBox
+// github codeSpaces
+// stackbilliz
+
+// -----------------------------------
+// install mongoose
+// create models -> todos -> userInfo.model.js  , todo, sub_todo
+// now create schema in sub_todo
+// schema 1 method hai je  leta hai  object
+
+// create model model ek method che  it take 2 parameters
+// 1)kya model banavu [name su rakishu]
+// 2)kis ke base se pe model banavu [fileds]
+// Model jayre connect thi jase db ma tayre aa files automatic run thi jay aur mongodb structure 
+// tayre thi jay ye meri headlines fildes che jemke execl ma hoy che
+// ane pachi aeni under data aavno start thi jashe
+
+// imp :- "User" mongodb ma only name jashe atle users thi jashe jayre koi bhi model
+//  dai tayre convert thai jay che blurel [pachal s lagvi de and convert in lowercase] 
+//  mein and badha lower Case ma thi jay che and s laghi jay che
+
+
+// but aanthi data to kai jai rahyo nati aa to stucture j htu mongoose nu khali
+
+
+
+// 2nd way ---> ma jayre aapde username ne obj ma li required true kriye tayre aa
+//  filds hovi j joye tayre moongose check kre ke aa filds hovi j joye aani shivya hu 
+//  data j store nai karu
+
+// -----> create user model entry
+
+// 1 obj define kre aapde su su data laishu
+// 2 obj define kre kya kya timestamp le rahe ho
+// Model createion => jayre aapde timeStamp add karvu hoy tayre ae ne
+//  bijo object create kri ne thya aapnu [jeti user kayre login thyo aene 
+//   kayre update thyuo ae kbr pde]
+
+
+// ------> todo
+// todo ma createdBy user info iska relation hona chaiye user ke sath user nu [Relation ] joye to
+// tayre 2 vastu
+// 1_) spaecial type che
+// 2)  refrence user no ref dyo cho kevu pade 
+// ObjectID ek type che jethi mongoose ne kbr padi jay che koino refernce dene wale hoon!
+// model ma je name hoy ae ref ma daiye che
+*/
+
+/* short 
+// underatand how to start project
+// create a model of todo
+*/
+
+// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used 
+/*
+// Create Ecom Models
+// In mongoDb it genrate id it self we dont need to declare 
+// --->user, category [8gb-16gb laptop, summer,winter ]
+// --->Product
+    // - pimg hume db store nahi karni chaiye karvi hoy to buffer type ma kri sakya but ae db
+    //  ma load le pachi
+    // // - server par 1 folder me rakhna chiye us folder ka public url liya jata hai ya to 
+    // thrid party services ma store karva ma aave che je ek url aape che ne aene db ma 
+    // store kari devani
+    // cloundary pn same che 
+
+    // --->Order 
+    // here we take in array it just like todo one check todo ma subtodo jema define karyu che 
+    // aem j bus aane sidhu array ma lidhu
+    // for[quantity and which product we order]
+      // --> kisne konsa product order kiya aure kitna order kiya
+    // for example:- dharti order 5 product [boat, books, headphone, nailpaint] now dharti 
+    // order all product but also we need to check product quantity
+    //  nailpaint ketli order kri[nailpaint -4, books-12, buds-1, ] aa rite
+
+    // --->OrderItem  --> mongodb badha table mate ek unique id genreate kre che 
+
+    // Id na base par aakha product ne access kri leshu ane quntity define kri dithi 
+    // che so aa kha schema ne aarya ma lai lidh0
+// enum means choices
+    // ---->satus order status[pending, deliverd, cancelled ma j choice kri sko cho] aa 
+    // 3 mthi j choose kri saksho spelling mistake hse to bhi enter nai karva de
+
+// --------------------------------> Hospital Managment 
+  // patient
+  // doctor
+  // Hospital
+
+  // like ka array rakhna ho to user aake ek btn hi to bdabata hai to apna objectid[uniqueid ] hai 
+  // like dislike ma  [user na id store kravna ]
+
+  // aane kehvuya data structue karva 
+*/
 
 
 // github copiloat --> for suggestion
