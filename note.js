@@ -1,17 +1,20 @@
 // deploye node using pm2
 // deploye react using nginx
 
-// -------------------> 01 roadmap
+// -------------------------------------------> 01 roadmap
 /*
 // check pdf
 
 // ORM (Object-Relational Mapping):
 // ODM (Object-Document Mapping):
+
 */
-// Check hitesh APi video in english chnael
-// -------------------> 02 make single app and deploy
+
+
+// -----------------------------------------------> 02 make single app and deploy
 // Express site api refrense 
 /*
+// Check hitesh APi video in english chnael
 understand first from the notebook
 to create app  -> npm init
 // Explorer also express site
@@ -109,9 +112,7 @@ thi restart karvu pade
    2)Deployed
 */
 
-
-
-// -------------------> 03 create FE and BE
+// -----------------------------------------------> 03 create FE and BE
 /*
 // create  BE & FE folder
 // there are two type of js
@@ -168,5 +169,72 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 
             // BE ma changes kriye to prpoget[show] krshe but React na changes nai kre 
             // soo aapde fri thi build banavu pade ane fri thi dist move karvu pade BE ma tayre[it is bad practice]
+*/
+
+// -----------------------------------------------> 04 MODLES
+/*
+// diff b/w exp &  fresher
+
+// read first from the book
+// site is :- moon model, datensen -> for data Modeling
+
+
+// eraser to create a structure
+
+// 1) create Register from
+// 2) create todo 
+// go to mongoose site , prisma is one helper 
+
+// -----------------------------------Phase :- 2 2:30:12 [Code write]
+
+// codeSandBox
+// github codeSpaces
+// stackbilliz
+
+// -----------------------------------
+// install mongoose
+// create models -> todos -> userInfo.model.js  , todo, sub_todo
+// now create schema in sub_todo
+// schema 1 method hai je  leta hai  object
+
+// create model model ek method che  it take 2 parameters
+// 1)kya model banavu [name su rakishu]
+// 2)kis ke base se pe model banavu [fileds]
+// Model jayre connect thi jase db ma tayre aa files automatic run thi jay aur mongodb structure 
+// tayre thi jay ye meri headlines fildes che jemke execl ma hoy che
+// ane pachi aeni under data aavno start thi jashe
+
+// imp :- "User" mongodb ma only name jashe atle users thi jashe jayre koi bhi model
+//  dai tayre convert thai jay che blurel [pachal s lagvi de and convert in lowercase] 
+//  mein and badha lower Case ma thi jay che and s laghi jay che
+
+
+// but aanthi data to kai jai rahyo nati aa to stucture j htu mongoose nu khali
+
+
+
+// 2nd way ---> ma jayre aapde username ne obj ma li required true kriye tayre aa
+//  filds hovi j joye tayre moongose check kre ke aa filds hovi j joye aani shivya hu 
+//  data j store nai karu
+
+// -----> create user model entry
+
+// 1 obj define kre aapde su su data laishu
+// 2 obj define kre kya kya timestamp le rahe ho
+// Model createion => jayre aapde timeStamp add karvu hoy tayre ae ne
+//  bijo object create kri ne thya aapnu [jeti user kayre login thyo aene 
+//   kayre update thyuo ae kbr pde]
+
+
+// ------> todo
+// todo ma createdBy user info iska relation hona chaiye user ke sath user nu [Relation ] joye to
+// tayre 2 vastu
+// 1_) spaecial type che
+// 2)  refrence user no ref dyo cho kevu pade 
+// ObjectID ek type che jethi mongoose ne kbr padi jay che koino refernce dene wale hoon!
+// model ma je name hoy ae ref ma daiye che
+*/
+
+
 
 // github copiloat --> for suggestion
