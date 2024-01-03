@@ -356,7 +356,7 @@ use the what changes are if we store to blank folder temparory then we create gi
                 // jemke user ni image varvare use thya che like user profile ma also in other page then it come in utlis
                 // je varevare repat thya aene ahiya hi lai leshu
 
-//----------------------------> add 2 commit Add structure  till here
+//----------------------------> add 6_1 commit Add structure  till here
 
 // install pretier [to structure the code] if you want to add to add karvni
  //  npm i -D prettier
@@ -365,5 +365,93 @@ use the what changes are if we store to blank folder temparory then we create gi
 
 // commit -----> add prettierignore
 */
+
+
+// -----------------------------------------------> 07 Db Connection
+/*
+
+// -----------------------------> Atals
+// https://chat.openai.com/c/d2d580a3-8d15-4703-84d4-60b8950cf7a5
+// search mongoDb Atlas
+// atlas is mongoDb sub services [give online databse]
+// now afetr login
+// new Project youtube -> next -> in next reaming as it is [project owner (aapde j chiye )] ->create project
+
+// ------------------------> deployement
+// ->create-> free -> provider(AWS) -> name gme te dai sakiye -> create 
+// to connect db -> uname->hitesh [dharti] ->pwd [dharti123]->as you wish -> create user  
+// pachi ip add kro 0.0.0.0/0 and finsih kro
+// now it goes behind the screen mongodb connection string je banvni automatic create kri deshe 
+// connection to create ho gya mongoDb ne to kr liya par hume bhi to db se connect  krna hai so
+// ip address->0.0.0.0/0 (host allow kro)
+
+// setps rai jaiy to
+// security --> network acces  ->ip adress allow hova joye , correct user,pwd , url 
+
+// 2)DatabseAcess 
+        // - db ma connect krishu ip to allow thi gyu uname,pwd mali gyu ch pn string pn joye
+        //database-> click on connect --> compose (kevi rite connect karvu chu aeno option aapshe)
+
+
+// if i want to create second Project 
+// goto setting -> orginazation -> Project [now u r in Dashboard page]
+
+
+// ------------------------------------------------> how to connect Db Connection start form here
+
+// 1) in env give port & mongoDb_url &   add db name in constant 
+// 2) db nu name hovu joye to name dithu give db name in contstant 
+// 3) there are 2-3 approch
+// aapde first file to run index js karvna chiye so
+        // 1) all code in index files 
+        // 2) db name ka folder connection ka func usme liku aur use func ko index mein call karungi
+
+// app --> express through , dbConnection-Mongo
+// 4) npm i dotenv , moongse, express
+
+//------------------------------------> now read from book 
+
+// 5) index.js
+        // -mongosse import kyki mongoose hai db se connect karega
+        // 1)create iife func
+        // 2)mongoodeconnect
+                // 1)url
+                // 2) db nae pachi await
+        // --ghani var aa j file ma j app import karv ma aave che 
+
+        // 3) jevu connect thi jay atle listen lagvnu listern hoy app jode atle app import karvni
+                // app on event listen kre che for ex 1 event is  error event db to 
+                // connect thi gyu pn 
+                // express ni app vat ni kri sakthi so error check 
+                // -db to connect thi gyu hoy pn su kbr express app vat na kri
+                //  sakthi hoy app on lagvnu
+                //  error aave to 
+             
+        
+
+// 2) ------------------------------------> second way
+// in db folder create index.js
+// in catch handle error but node js acces dey che process no
+// process current app ae 1 nayi process pe chal rahi hoti hai aur ye uska ref hai tme proces ne
+//  exit pn karvi sako cho je ek method che 
+        // - process.exit() vadre vach nu che exit method nu s
+        // https://www.geeksforgeeks.org/node-js-process-exit-method/
+// 3) import function in index js and excute it
+
+        // dotenv --> jetli jaldi app load thya aetli jaldi env var avilable thi java joye aaetla 
+        // mate index.js ma import
+        // now add in packge json kehvnu 1 experimntal fetures add karvu che karva do
+        // so add in pkg.json -r dotenv/config --experimental-json-modules
+        // now add env path in dotenv
+
+
+                
+
+        // now run the app if there is any error dont pancie don't copy paste on chhat gpt or google 
+        // first read the error properly then try to solve
+        // readmore about in questions file question 1
+*/
+
+
 
 // github copiloat --> for suggestion
