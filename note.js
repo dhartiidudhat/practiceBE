@@ -10,9 +10,8 @@
 
 */
 
-
 // -----------------------------------------------> 02 make single app and deploy
-// Express site api refrense 
+// Express site api refrense
 /*
 // Check hitesh APi video in english chnael
 understand first from the notebook
@@ -240,7 +239,7 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 // create a model of todo
 */
 
-// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used 
+// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used
 /*
 // Create Ecom Models
 // In mongoDb it genrate id it self we dont need to declare 
@@ -280,6 +279,179 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 
   // aane kehvuya data structue karva 
 */
+
+// -----------------------------------------------> 06 Basic Folder Structure
+
+/*   Project start from here
+
+// public
+// desc
+// create 
+
+// ---> next change branch
+// open new vs 
+// git init
+// git add .
+// git commit -m "initali files"  -> currently master brach 
+// rename the branch with git
+// git branch -M main //name change kri sakiye
+
+// create repo
+// git branch -M main ( master na badle main ma aavi jashu )
+
+// add remote
+// copy from that given   (push remotley kya karvnu)
+// git push -u orign main (push kri dese)
+
+// -----------------imges store karna using third party
+// --> koi bhi third party service aapde use krishu like (AWS, cloudnarey, Azure etc) photos uploads 
+karvishu ne aene temporerly server ma store krishu incase connection lost of user then photo 
+upload[store] in server  after that upload in cloudarnery or etc
+
+// ------> git desc
+// git status
+// if we only create folder then it show up to date but if create file then show 
+use the what changes are if we store to blank folder temparory then we create git keep file
+
+
+
+// ----->Start from here
+
+//1) npm init
+//2) if we store to blank folder temparory then we create git keep folder
+//           [go read git desc]
+
+
+//3)  create git ignore
+//          search for git ignore genrators it give node all that we ignore in git 
+// 4) create env [envirment varibales]
+// 5) cerate folder src 
+        // create 3 file app, index, constant in src
+// ---->Packg.json
+// there are 2 type importing in js 1)coomon js 2)module
+// add type :" module" , import
+// 6) install nodemon 
+            // npm i nodemon [to start server again and again]
+            // aa src ni inder index file ma je bhi lakhishu ae reload kri dese 
+            // ae aene kehvu to pade ne aena mate 
+            // packgaejson "dev" :"nodemon src/index.js"
+            // jayre pn kai change kru atle reload kri dyo
+
+// commit 06_1
+// ------------------------------------> second Phase 2
+//  1) create folder 
+        //1) - controller
+                // functionalty aave  
+        // 2) db
+                // gme te hoy db connection logic here
+        // 3) middlewares
+                // req aayi server fullfil kre ae pehla j vache checking karvi hoy to ae middlewares ma ave
+                // for ex cookies dyo etc
+        // 4) models
+                // data modeling
+        // 5)routes
+                // routes
+        // 6)utils
+                // utils ka shortcut [file upload, videos, mail, tokens]
+                // jemke user ni image varvare use thya che like user profile ma also in other page then it come in utlis
+                // je varevare repat thya aene ahiya hi lai leshu
+
+//----------------------------> add 6_1 commit Add structure  till here
+
+// install pretier [to structure the code] if you want to add to add karvni
+ //  npm i -D prettier
+//  create .prettirerc file
+// cerate .prettierignore file
+
+// commit -----> add prettierignore
+*/
+
+
+// -----------------------------------------------> 07 Db Connection
+/*
+
+// -----------------------------> Atals
+// https://chat.openai.com/c/d2d580a3-8d15-4703-84d4-60b8950cf7a5
+// search mongoDb Atlas
+// atlas is mongoDb sub services [give online databse]
+// now afetr login
+// new Project youtube -> next -> in next reaming as it is [project owner (aapde j chiye )] ->create project
+
+// ------------------------> deployement
+// ->create-> free -> provider(AWS) -> name gme te dai sakiye -> create 
+// to connect db -> uname->hitesh [dharti] ->pwd [dharti123]->as you wish -> create user  
+// pachi ip add kro 0.0.0.0/0 and finsih kro
+// now it goes behind the screen mongodb connection string je banvni automatic create kri deshe 
+// connection to create ho gya mongoDb ne to kr liya par hume bhi to db se connect  krna hai so
+// ip address->0.0.0.0/0 (host allow kro)
+
+// setps rai jaiy to
+// security --> network acces  ->ip adress allow hova joye , correct user,pwd , url 
+
+// 2)DatabseAcess 
+        // - db ma connect krishu ip to allow thi gyu uname,pwd mali gyu ch pn string pn joye
+        //database-> click on connect --> compose (kevi rite connect karvu chu aeno option aapshe)
+
+
+// if i want to create second Project 
+// goto setting -> orginazation -> Project [now u r in Dashboard page]
+
+
+// ------------------------------------------------> how to connect Db Connection start form here
+
+// 1) in env give port & mongoDb_url &   add db name in constant 
+// 2) db nu name hovu joye to name dithu give db name in contstant 
+// 3) there are 2-3 approch
+// aapde first file to run index js karvna chiye so
+        // 1) all code in index files 
+        // 2) db name ka folder connection ka func usme liku aur use func ko index mein call karungi
+
+// app --> express through , dbConnection-Mongo
+// 4) npm i dotenv , moongse, express
+
+//------------------------------------> now read from book 
+
+// 5) index.js
+        // -mongosse import kyki mongoose hai db se connect karega
+        // 1)create iife func
+        // 2)mongoodeconnect
+                // 1)url
+                // 2) db nae pachi await
+        // --ghani var aa j file ma j app import karv ma aave che 
+
+        // 3) jevu connect thi jay atle listen lagvnu listern hoy app jode atle app import karvni
+                // app on event listen kre che for ex 1 event is  error event db to 
+                // connect thi gyu pn 
+                // express ni app vat ni kri sakthi so error check 
+                // -db to connect thi gyu hoy pn su kbr express app vat na kri
+                //  sakthi hoy app on lagvnu
+                //  error aave to 
+             
+        
+
+// 2) ------------------------------------> second way
+// in db folder create index.js
+// in catch handle error but node js acces dey che process no
+// process current app ae 1 nayi process pe chal rahi hoti hai aur ye uska ref hai tme proces ne
+//  exit pn karvi sako cho je ek method che 
+        // - process.exit() vadre vach nu che exit method nu s
+        // https://www.geeksforgeeks.org/node-js-process-exit-method/
+// 3) import function in index js and excute it
+
+        // dotenv --> jetli jaldi app load thya aetli jaldi env var avilable thi java joye aaetla 
+        // mate index.js ma import
+        // now add in packge json kehvnu 1 experimntal fetures add karvu che karva do
+        // so add in pkg.json -r dotenv/config --experimental-json-modules
+        // now add env path in dotenv
+
+
+                
+
+        // now run the app if there is any error dont pancie don't copy paste on chhat gpt or google 
+        // first read the error properly then try to solve
+        // readmore about in questions file question 1
+*/
+
 
 
 // github copiloat --> for suggestion
