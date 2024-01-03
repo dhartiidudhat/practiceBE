@@ -10,9 +10,8 @@
 
 */
 
-
 // -----------------------------------------------> 02 make single app and deploy
-// Express site api refrense 
+// Express site api refrense
 /*
 // Check hitesh APi video in english chnael
 understand first from the notebook
@@ -240,7 +239,7 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
 // create a model of todo
 */
 
-// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used 
+// -----------------------------------------------> 05 Models of E-com & Hospital mangment models when full series complet then agian try this all models & try to also fro which u used
 /*
 // Create Ecom Models
 // In mongoDb it genrate id it self we dont need to declare 
@@ -281,5 +280,90 @@ proxy name che atle server ne laghse aenu origin 3000 che atle same home ne allo
   // aane kehvuya data structue karva 
 */
 
+// -----------------------------------------------> 06 Basic Folder Structure
+
+/*   Project start from here
+
+// public
+// desc
+// create 
+
+// ---> next change branch
+// open new vs 
+// git init
+// git add .
+// git commit -m "initali files"  -> currently master brach 
+// rename the branch with git
+// git branch -M main //name change kri sakiye
+
+// create repo
+// git branch -M main ( master na badle main ma aavi jashu )
+
+// add remote
+// copy from that given   (push remotley kya karvnu)
+// git push -u orign main (push kri dese)
+
+// -----------------imges store karna using third party
+// --> koi bhi third party service aapde use krishu like (AWS, cloudnarey, Azure etc) photos uploads 
+karvishu ne aene temporerly server ma store krishu incase connection lost of user then photo 
+upload[store] in server  after that upload in cloudarnery or etc
+
+// ------> git desc
+// git status
+// if we only create folder then it show up to date but if create file then show 
+use the what changes are if we store to blank folder temparory then we create git keep file
+
+
+
+// ----->Start from here
+
+//1) npm init
+//2) if we store to blank folder temparory then we create git keep folder
+//           [go read git desc]
+
+
+//3)  create git ignore
+//          search for git ignore genrators it give node all that we ignore in git 
+// 4) create env [envirment varibales]
+// 5) cerate folder src 
+        // create 3 file app, index, constant in src
+// ---->Packg.json
+// there are 2 type importing in js 1)coomon js 2)module
+// add type :" module" , import
+// 6) install nodemon 
+            // npm i nodemon [to start server again and again]
+            // aa src ni inder index file ma je bhi lakhishu ae reload kri dese 
+            // ae aene kehvu to pade ne aena mate 
+            // packgaejson "dev" :"nodemon src/index.js"
+            // jayre pn kai change kru atle reload kri dyo
+
+// commit 06_1
+// ------------------------------------> second Phase 2
+//  1) create folder 
+        //1) - controller
+                // functionalty aave  
+        // 2) db
+                // gme te hoy db connection logic here
+        // 3) middlewares
+                // req aayi server fullfil kre ae pehla j vache checking karvi hoy to ae middlewares ma ave
+                // for ex cookies dyo etc
+        // 4) models
+                // data modeling
+        // 5)routes
+                // routes
+        // 6)utils
+                // utils ka shortcut [file upload, videos, mail, tokens]
+                // jemke user ni image varvare use thya che like user profile ma also in other page then it come in utlis
+                // je varevare repat thya aene ahiya hi lai leshu
+
+//----------------------------> add 2 commit Add structure  till here
+
+// install pretier [to structure the code] if you want to add to add karvni
+ //  npm i -D prettier
+//  create .prettirerc file
+// cerate .prettierignore file
+
+// commit -----> add prettierignore
+*/
 
 // github copiloat --> for suggestion
