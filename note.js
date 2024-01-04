@@ -685,4 +685,59 @@ use the what changes are if we store to blank folder temparory then we create gi
         2) make utility for file upload
         3) make middleware
 */
+
+// -----------------------------------------------> 11 HTTP Crash Course
+/*
+//  go to linkdien in take notes of http crash course  [data kai rite transfer karva one pc to another]
+// http & https are diff protocal ka diff hoy che
+// http mein data cletext ma jay che abc moklye to abc j jay
+// https mein 1 layer aavi jay che je data ne encrypt kre che  jo data bhejte hai wo 1 key
+// laga ke opertaion kre che jethi data eadble nti rehto clien ke server par readble thi jay 
+// inbetween data readble na rahe in https
+// http -> hypertext transform Protocol
+// /check in notebook
+// after check diagram come here
+// URL  -> kaha pe location hai usika 
+// URI -> identifier su che 
+// URN -> name su che
+
+
+// now go to pdf
+// httpHeaders
+// jayre koi http req moklo to info moklvi pade che fnmae, fupadte kayre thi ae kehvu pade
+// aeni sathe some meta data aave che ae badhu httpheaders hoy che
+
+// ghana header defined hoy che aa aave to aa accept kru chu
+// aapde header banvi pn sakiye chiye
+// headers req ane response male che
+
+// headers meta data hoy che je key-value pair ma aave che
+// check pdf of hitesh
+
+// Headers---->
+// Represntational Header:- app like mobile data in compress format ma aave che ane export kri ne use karvu pade,
+// ex zerodha ma graph je compress format ma hoy che pachi aene export kri ne use kri sakiye
+// Payload header=  data[is, email exc]
+
+// Most Common Header
+// 1)Acccpt -> kya format ma data accept krshe [ Informs the server about the types of media that the client can process.]
+// 2) userAgent -> konsi app se req aaayi hai [postman, browse[konsa tha], enginee]
+// 3)Authorization:- bearertkoken hoy che
+// 4)content-type:- su moklo cho imge/video/file
+// 5)cookie:- { } ketla time sudhi cookie reshe/ user ketla time sudhi login reshe/ uniCode 
+// 6)cache-control:- data kayre exprie kru 
+// Cors Headre
+// security Header
+
+// Http Methods
+// /options:- kon kon se op avilable hai ex :- /user -> user ma get , put , post avilable che 
+// trace:- debugging [req mokli hoy aeno response aapi de che] [
+        // ketlik var reposne proxy pachal hoy ceh kai proxy mathi thai req jay chek
+        // kai kai proxy mathi thai response aave che [response ma time laghe , poping hoy ,
+        // use case mein iska use krthe hai ]
+// ]
+// take more info about it
+//read question 5  
+// HttpStatusCode complete 08:08:18
+*/
 // github copiloat --> for suggestion
