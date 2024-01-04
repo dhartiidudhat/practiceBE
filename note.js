@@ -452,6 +452,192 @@ use the what changes are if we store to blank folder temparory then we create gi
         // readmore about in questions file question 1
 */
 
+/*
+-create db in mongo atlas
+1) create a project
+2) db connect first need db name, string and give port
+3) create a file and conncect the db
+4) handle error & async await
+5) dotenv
+*/
+
+// -----------------------------------------------> 08 add more pkg, middleware little bit --> watch in 1
+/*
+// https://chat.openai.com/c/78280afe-d1fd-49fb-a17d-4fec74529524
+
+// now db is connected we can add then & catch 
+
+//1) in app .js import express 
+        // take in one variable
+// 2) import app in index.js
+        // first add then catch in db 
+        // in catch db conn failed
+        // in try if connect then listen on port 
+        // ass :- also liten error event 
+// 3) go to express doc -> api response (5)
+        //1)req --> req mein kab kab kese data aa raha hai usko muje handle karna hai &
+        //2) res  --> es muje kese bhajena hai
+
+        // more req.params, req.body
+// 4) cookies kya hoti hai , kese use krthe , kese server se leghe
+        //npm i  we need cookie-parser , cors , 
+        // -import cors, cookie-parser in app.js
+        // use method  used for  middlewar or confiagraution mate use ma aave che
+
+        // add cors origin in env
+                // origin option in env * [matalb gme thya thi url aave chale pn aapde aapdi url dfine karvi joye]
+                // origin ma fonend ni link
+                // Learn about cors pkg 
+                //add whitelistening explore in express
+        // 
+// 5) cookie option joishu ae pehla stetting krishu
+        //express.json()
+                //  data kyathi aavse aene preparation chali rah che url ma thi aavi sake, json ma data moklesh,
+                // req.body ma aavi sake , form aavi sake direct , to kai fromat aavi sake ae naki nayti htu so json format ma leva [object maleva ]
+                // so aapde read kri sakiye atle express.json()
+        //1)  middleware set karva app.use(express.json()) json ne use karva 
+        //2)urlencoded()
+        //       url ma je data aave aene samjava app.use(express.urlencoded({extended}))
+                // extend means obj ni under obj nested obj mate is optional
+        //3) static  ->
+                // kuch file folder store karna chata hu, image aayi aeni store kri lav ae 
+        // public asset che je koi bhi use kri sake che  (folder names)
+       // app.use(express.static())
+// cookies  -> me server se user ke browser uske under se user ki cookie access bhi kar pau aur
+//  cokkies set bhi kar pau , crud op kar pau
+// secure cookies user ke browse mein rakh sakhte ho us cookies ko server hai read kr sakhta hai aur
+// server hai remove kr paye uske liye 
+// app.use(cookieParser())
+// go to diagram to understand middleware check ss & also write in note book [middleware understanding]
+
+// ------> utils[user,video controller func aa rite excute karvu hoy
+//  tayre method ma fun pass kr 
+// dena me execute karke waps kar dunga [wrapper]]
+// db ni vat vare var krishu to aatlu badhu code lakhvu aeni kartha 1 utils banyi leshu
+// genralize func thi jayre execuete karvu hoy aa code tayre method pass kri dejo 
+// method execute kri ne dai dese je func pass kryu hse aemyhi err, res, req, next lai leshu
+// 1) create file asyncHandler.js
+        // method banvshe aene pass kri deshee
+
+
+// --------------->   standrzation err msg or sucess msg
+// search nodejs api error
+// je ek class deshe error no 
+// create utils-> ApiError.js
+// create class and extssends error class
+// constuctor avilable che but aapde aapdo banvishu
+// constuctor ma su su desu 
+// error [] bcu multipal error show karva
+// override mate super call kishu 
+// aena statuscode aapda statuscode thi overrider krishu this thi 
+
+// readmore Abouut Api Error in question 2
+
+// -------------> create for response
+// 1) create response file
+        // response koi claas hoto nati so easily we can create this
+        // hve koi error aave to Api Error through j jay
+        // atle middleware lakhva pade
+*/
+
+/* short hand
+1) create app and take in index 
+2) express website(res, req req.params)
+3)express.json, urlencoded , cors, cookieparser
+4)understand middleware
+5)utilty of db 
+6)standard err response
+
+*/
+// -----------------------------------------------> 09 Data models,Tokens
+/*
+// discuss  about user model, video model plugin[] ,aggrigation, jwt , encrypt,bcrypt
+// 1) model
+        //1) - create user.model.js
+        //2) - video -model-js
+        //-----> read about unique id in mongoDb  ---->
+
+// pwd string rakishu [db leak thya che atle aene encrypt kri ne rakhu]
+// refreshToken -> update Token 
+// Watch history make project complex
+//2)  mongoose aggregate-paginate-v2 install it
+        // it allows you to write aggrigation query. 
+        // mongodb ma basic aa j skiya hoye insert many , update many but a pkg krishu 
+        // search mongo aggregation pipline 
+        // install pkg
+        //1) import that in video model
+        //2)  export pela aene use karvu pade
+        // mongoose ma midddlware aema ghani middlware laki sakya che aane appda  plugin add kri sako
+        // plugin is below
+
+        // validate, save, remove, updateOne, deletoOne
+        
+       
+        
+// 3) bcrypt ->  for node js pkg  [most used with node]
+        // and bcryptjs -> javascript 0 dependenices.compatible with bcrypt 
+        // install it  -> it is library it help to u hash ur password 
+        // pwd encrypt pachi aen edecrypte kravu pade ne comapre karvu pade aena mate bcrypt
+// 4) JWT --> install [json web token] 
+        // go jwt.io to check 
+        // header -> kyo algorithem che [automatice inject thya]
+        // main role payload -> je bhi data moklshu ae payload ma encrypt thi jashe [token genarate krshe ]
+        // secret j che je badhi token ne unique banve che 
+        // read more question 3
+
+//5)    user file ma lai levna 2 ne pkg ne
+// direct encryption possible nti atle mongoose hooks ni help leshu 
+        
+         // pre --> data just save thya che ae pela just kro 
+        // post -> data save thya pachi just kro 
+
+
+        // pre hook ma code lakishu je execute krvu hoy ae
+        // kyu event use karva mang chu validate delete save etc
+        // pre ma kya par karvu che to save kru tayre pre ni under arrow use nai kriye bcu aema this context nti hoto
+        // so function use krishu
+        // function ma data aavth time lagshe atle async ne kam pati jay pachi next middleware ma flag ma next nu acces hovu j joye
+        // next is  flag hve aagal pass kri do
+        // hash [encrypt]
+        // 1)su hash karvu che 2) ketla rounds lagva che salt
+        // pwd encrtyp pachi  password comapre karva (sacho che ke nai)
+        // compare mate method banvishu 
+        // comapare ma 1 mangeshe pwd je user mangshe ne 2) encrypted pwd
+        // true false ma ans deshe
+
+// 6)JWT 
+        // - jwt is beraer tokn hai means jo usko bear kartha hai use wo sahi man lete hai
+        // aa token jeni pase hse ne req moklshe ae ne hu data moklish
+        // also check if time json web token github page
+        
+        // 1) add token in env
+                // 1) ACCESS_TOKEN_SCERT -> AT
+                // 2)ACCESS_TOKEN_EXPIRE -> 1d matlab 1 day pachi expire thi jashe
+                // 3)Refresh_Token_secret ->
+                // 4) refresh_TOKEN_EXPIRE => 10d
+                // here main token exp time is less than refresh token
+
+                // but sir hum sirf refresh tokrn ki hai bat kr rahe hai access token ki to bat kar nahi rahe
+                // yaha pe hum both use krnge session storage and local storage so 
+                // AT - > ye dbb mein store nahi karnge
+                // RT -> ye hum db store karnge
+        // 2) userSchema 
+        //     1) add method is genrateAccessToken
+        //     2) add genrateRefreshToken also
+        // both are jwt token there is no diff in token but diff is in how we use
+                // 3)jwt ma sign method che aama ghanu che payload, obj, buffer, scretkey
+                        // payload 1) give payload first 
+                        // 1) AccessToken
+                        // 2)object jema {expirey}
+                // 4) refresh token same as Access Token
+                // now In next video how to nsert data in db 
+*/
+
+/* short
+1) create models first
+*/
+
+
 
 
 // github copiloat --> for suggestion
