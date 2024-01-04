@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "jan1 to jan 3 project",
   "main": "index.js",
-  "type": "module",
+  "type": "module ",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules   src/index.js"
   },

@@ -7,7 +7,7 @@ const connectDB = async () => {
     const dbInstance = await mongoose.connect(
       `${process.env.MONGODB_URI}/${DB_NAME}`
     );
-    console.log(`Db Connected Successfully !`, dbInstance.connection.host);
+    console.log(`Db Connected Successfully `, dbInstance.connection.host);
     app.on("error", () => {
       console.log("Express App not work !");
     });
