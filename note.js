@@ -461,7 +461,7 @@ use the what changes are if we store to blank folder temparory then we create gi
 5) dotenv
 */
 
-// -----------------------------------------------> 08 add more pkg, middleware little bit --> watch in 1
+// -----------------------------------------------> 08 add more pkg, middleware little bit 
 /*
 // https://chat.openai.com/c/78280afe-d1fd-49fb-a17d-4fec74529524
 
@@ -549,7 +549,7 @@ use the what changes are if we store to blank folder temparory then we create gi
 6)standard err response
 
 */
-// -----------------------------------------------> 09 Data models,Tokens
+// -----------------------------------------------> 09 Data models,Tokens [start focusing]
 /*
 // discuss  about user model, video model plugin[] ,aggrigation, jwt , encrypt,bcrypt
 // 1) model
@@ -567,7 +567,7 @@ use the what changes are if we store to blank folder temparory then we create gi
         // install pkg
         //1) import that in video model
         //2)  export pela aene use karvu pade
-        // mongoose ma midddlware aema ghani middlware laki sakya che aane appda  plugin add kri sako
+        // mongoose ma midddlware aema ghani middlware laki sakya che aane appda plugin add kri sako
         // plugin is below
 
         // validate, save, remove, updateOne, deletoOne
@@ -577,11 +577,11 @@ use the what changes are if we store to blank folder temparory then we create gi
 // 3) bcrypt ->  for node js pkg  [most used with node]
         // and bcryptjs -> javascript 0 dependenices.compatible with bcrypt 
         // install it  -> it is library it help to u hash ur password 
-        // pwd encrypt pachi aen edecrypte kravu pade ne comapre karvu pade aena mate bcrypt
-// 4) JWT --> install [json web token] 
+        // pwd encrypt pachi aene decrypte kravu pade ne comapre karvu pade aena mate bcrypt
+// 4) JWT --> install [jsonwebtoken] 
         // go jwt.io to check 
         // header -> kyo algorithem che [automatice inject thya]
-        // main role payload -> je bhi data moklshu ae payload ma encrypt thi jashe [token genarate krshe ]
+        // main role payload -> je bhi data moklshu ae payload ma encrypt thi jashe[token genarate krshe ]
         // secret j che je badhi token ne unique banve che 
         // read more question 3
 
@@ -593,20 +593,22 @@ use the what changes are if we store to blank folder temparory then we create gi
 
 
         // pre hook ma code lakishu je execute krvu hoy ae
-        // kyu event use karva mang chu validate delete save etc
-        // pre ma kya par karvu che to save kru tayre pre ni under arrow use nai kriye bcu aema this context nti hoto
+        // kyu event use karva mango chu validate, delete, save etc
+        // pre ma kya par karvu che to save kru tayre pre ni under arrow use nai kriye bcu 
+        aema this context nti hoto
         // so function use krishu
-        // function ma data aavth time lagshe atle async ne kam pati jay pachi next middleware ma flag ma next nu acces hovu j joye
+        // function ma data aavth time lagshe atle async ne kam pati jay pachi next middleware 
+        ma flag ma next nu acces hovu j joye
         // next is  flag hve aagal pass kri do
         // hash [encrypt]
         // 1)su hash karvu che 2) ketla rounds lagva che salt
-        // pwd encrtyp pachi  password comapre karva (sacho che ke nai)
+        // pwd encrtyp pachi password comapre karva (sacho che ke nai)
         // compare mate method banvishu 
-        // comapare ma 1 mangeshe pwd je user mangshe ne 2) encrypted pwd
+        // comapare ma 1 mangeshe pwd je user pase thi aavshe 2) encrypted pwd db mathi
         // true false ma ans deshe
 
 // 6)JWT 
-        // - jwt is beraer tokn hai means jo usko bear kartha hai use wo sahi man lete hai
+        // - jwt is beraer token hai means jo usko bear kartha hai use wo sahi man lete hai
         // aa token jeni pase hse ne req moklshe ae ne hu data moklish
         // also check if time json web token github page
         
@@ -630,14 +632,57 @@ use the what changes are if we store to blank folder temparory then we create gi
                         // 1) AccessToken
                         // 2)object jema {expirey}
                 // 4) refresh token same as Access Token
-                // now In next video how to nsert data in db 
+                // now In next video how to insert data in db 
 */
 
 /* short
-1) create models first
+1) create models first user, video
+2) mongooseAggrigationpaginatev2
+3) bcrypt
+4) JWT
+
 */
 
+// -----------------------------------------------> 10 File Upload [start main here focus]
+/*
+// FE side form banvi sake aene browse kravi ske ne link dai sake bus
+// File handling nu kam BE side j hoy che [pdf, image, video badha upload nu kam kri sako ]
+// file handling khudke server par nhi ki jati [ ka to third party ka aws is ]
+// cloudinary  Dharti@106*
+// filupload mate  2 pkg -> multer or fileexpress
+// multer use krishu
+// 1)signIn
+// 2)install cloudnairy , multer
+// statergy:->
+        // user se file upload karvynge. multer se hai file upload hogi. cloudinary ek 
+        // services hai direct us se nahi hota cloudnairy file kese leke 
+        // jaynge ye humse file lete hai aur server par upload krthi hai same as aws
+        // hum kya karnge multer ka use kar ke hue hum wo file lenge user se aur localstorage 
+        // mein temp rakhi desu pahi 2)
+        // cloudi778 nary no use kri ne local storage se file lenge aur server pe denge
+        // koi service ma bhi rakhe che aapde utils ma rakishu
 
+        // 3)create cloudnairy file
+        // aama file aavshe fille system ke through matlab server par already upload thi gyi
+        //server se local file ka path denge (file je server par aa jayegi )
+        // server se local path dongo jo  mein cloud nairy mein dunga
+        // file ko remove bhi karvni succefully add thi jay pachi server pr thi remove karvni
+        //       1)import clodnary, fs
+        //      2)give env var cloudinary cloud name,cloudinary apikey,cloudinary apiscret
+        //      3) take cloudconfig from cloudinary
+        // ek method banvishu method ni under parameter local fileno path desu succesfully
+        //  upload thi jaishu to file ne unlink kri desu 
+        //-----------------------> 4) create middleware--------------------->
+        // ja rahe ho kahi  jate time muje milthe jana 
+        // multer no use kri middleware banavishu jay jaya jarur hse thya enject kri deshu
+        // 1) create file multer   --https://github.com/expressjs/multer#readme
+        // save mate destination 
+        // log fileand explorer
+*/
 
-
+/* short hand
+        1) create cloudinary account
+        2) make utility for file upload
+        3) make middleware
+*/
 // github copiloat --> for suggestion
