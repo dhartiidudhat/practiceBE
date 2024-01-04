@@ -643,7 +643,46 @@ use the what changes are if we store to blank folder temparory then we create gi
 
 */
 
+// -----------------------------------------------> 10 File Upload [start main here focus]
+/*
+// FE side form banvi sake aene browse kravi ske ne link dai sake bus
+// File handling nu kam BE side j hoy che [pdf, image, video badha upload nu kam kri sako ]
+// file handling khudke server par nhi ki jati [ ka to third party ka aws is ]
+// cloudinary  Dharti@106*
+// filupload mate  2 pkg -> multer or fileexpress
+// multer use krishu
+// 1)signIn
+// 2)install cloudnairy , multer
+// statergy:->
+        // user se file upload karvynge. multer se hai file upload hogi. cloudinary ek 
+        // services hai direct us se nahi hota cloudnairy file kese leke 
+        // jaynge ye humse file lete hai aur server par upload krthi hai same as aws
+        // hum kya karnge multer ka use kar ke hue hum wo file lenge user se aur localstorage 
+        // mein temp rakhi desu pahi 2)
+        // cloudi778 nary no use kri ne local storage se file lenge aur server pe denge
+        // koi service ma bhi rakhe che aapde utils ma rakishu
 
+        // 3)create cloudnairy file
+        // aama file aavshe fille system ke through matlab server par already upload thi gyi
+        //server se local file ka path denge (file je server par aa jayegi )
+        // server se local path dongo jo  mein cloud nairy mein dunga
+        // file ko remove bhi karvni succefully add thi jay pachi server pr thi remove karvni
+        //       1)import clodnary, fs
+        //      2)give env var cloudinary cloud name,cloudinary apikey,cloudinary apiscret
+        //      3) take cloudconfig from cloudinary
+        // ek method banvishu method ni under parameter local fileno path desu succesfully
+        //  upload thi jaishu to file ne unlink kri desu 
+        //-----------------------> 4) create middleware--------------------->
+        // ja rahe ho kahi  jate time muje milthe jana 
+        // multer no use kri middleware banavishu jay jaya jarur hse thya enject kri deshu
+        // 1) create file multer   --https://github.com/expressjs/multer#readme
+        // save mate destination 
+        // log fileand explorer
+*/
 
-
+/* short hand
+        1) create cloudinary account
+        2) make utility for file upload
+        3) make middleware
+*/
 // github copiloat --> for suggestion
