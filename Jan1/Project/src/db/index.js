@@ -8,13 +8,13 @@ const connectDB = async () => {
       `${process.env.MONGODB_URI}/${DB_NAME}`
     );
     console.log(`Db Connected Successfully `, dbInstance.connection.host);
-    app.on("error", () => {
-      console.log("Express App not work !");
-    });
+    // app.on("error", () => {
+    //   console.log("Express App not work !");
+    // });
 
-    app.listen(process.env.PORT, () => {
-      console.log(`App listen on port ${process.env.PORT}`);
-    });
+    // app.listen(process.env.PORT, () => {
+    //   console.log(`App listen on port ${process.env.PORT}`);
+    // });
   } catch (error) {
     console.log("DB Connection error !", error);
     process.exit(1);

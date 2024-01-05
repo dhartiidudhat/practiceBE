@@ -1,3 +1,4 @@
+import { app } from "./app.js";
 import connectDB from "./db/index.js";
 import dotenv from "dotenv";
 
@@ -5,7 +6,19 @@ dotenv.config({
   path: "./env",
 });
 
-connectDB();
+connectDB()
+  .then(() => {
+    app.on("error", (error) => {
+      console.log(` Express App not work !`, error);
+    });
+    app.listen(process.env.PORT, () => {
+      console.log(`App llisten on Port ${process.env.PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log("DB connection Failed !", error);
+    process.exit(1);
+  });
 
 /*
 import mongoose from "mongoose";

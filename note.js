@@ -741,3 +741,39 @@ use the what changes are if we store to blank folder temparory then we create gi
 // HttpStatusCode complete 08:08:18
 */
 // github copiloat --> for suggestion
+
+// -----------------------------------------------> 12 Controoler & Routes
+/*
+// jetla vadhre controllers lakishu aetlu logic building vadhare thase
+// loggic buliding preactice kro 
+// threr is 1 big problem than divide it in smaller chunks than try to solve one by one 
+// leetcode, DSA , realworldProjects
+// register user we do in this video
+
+// 1) user.controller.js
+        // 1)helper file lakhi che aapde 1 import asyncHandler
+                // - try catch varevare lakhvu nai pade , req, res,next aavi jay che
+     
+        // 2)take asyncHandler in one method 
+        // method to banyi ditu hve run kayre thase url hit par url mate routes define krishu
+// 2)user.routes.js
+        // 1) import route from express
+        // 2) create route
+        // 3)export route
+        // 4) import routes in app
+        // 5) use middleware and define prefix and go to which router
+                // app.use()
+                // bcu we can do app.get bcu we use route & controller same 
+                file but now we have diffrent files for controller and routes 
+                so we ned to use middleware
+
+        // 6) when route come what to do
+                // -define routes & methods
+
+        // 7)standard practice
+                // define kro api version kyu chale che
+        // 8) thunnderClient Or Postman
+        // 9) run your api in postman
+
+
+*/
